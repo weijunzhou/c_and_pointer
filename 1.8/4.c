@@ -10,20 +10,24 @@
 int main(int argc, char **argv)
 {
 	char string1[1000] = {0};
-	char String2[1000] = {0};
-	char **pString = string;
+	char string2[1000] = {0};
+	char *pString = string1;
+	char *pMaxString = string2;
+	char *pTempString = NULL;
 	int stringLen = 0;
 	int maxStringLen = 0;
-	while(gets(pString) != NULL && pString[0] != '\0' )
+	while(gets(pString) != NULL && strlen(pString) != 0)
 	{
-		stringLen = strlen(string);
+		stringLen = strlen(pString);
 		if (stringLen > maxStringLen)
 		{
-			strcpy(maxString, string);
+			pTempString = pString;
+			pString = pMaxString;
+			pMaxString = pTempString;
 			maxStringLen = stringLen;
 		}
 	}
-	puts(maxString);
+	puts(pMaxString);
 	return 0;
 }
 
