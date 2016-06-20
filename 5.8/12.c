@@ -2,19 +2,19 @@
 	> File Name: 12.c
 	> Author: weijun
 	> Mail: 20044439@163.com 
-	> Created Time: 2016年06月 1日  8:40:43
+	> Created Time: 2016年06月15日  9:05:49
  ************************************************************************/
 /*
- * 判断是否闰年
+ * 测试右移位操作是逻辑移位还是算术移位，结果是算术移位
  */
 #include<stdio.h>
+
 int main(void)
 {
-	bool isLeapYear = 0;
-	int year;
+	char b = -25;
+	int a = 10;
 
-	scanf("%d", &year);
-	isLeapYear = (year%4==0 && (year%100!=0 || year%400==0))?true:false;
-	printf("%s\n", isLeapYear==1?"Leap Year":"not Leap Year");
+	printf("%x,%d\n", b, b<<2);
+
 	return 0;
 }
