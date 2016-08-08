@@ -64,3 +64,13 @@ int dll_insert(register Node*rootp, int value)
 
 	return 1;
 }
+/*
+ * 从一个双链表中移除一个节点
+ * 如果链表不包含欲移除的节点，函数就返回假，
+ * 否则函数移除该节点并返回真。
+ */
+int dll_remove(struct NODE *rootp, struct NODE *node)
+{
+
+	return true;
+
